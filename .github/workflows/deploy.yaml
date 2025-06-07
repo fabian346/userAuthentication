@@ -1,0 +1,15 @@
+name: "deploy first user authentication"
+
+# trigger - disparador del workflow
+on:
+  push:
+    branches: ["main"]
+
+# donde queremos que se ejecute el workflow
+jobs:
+  deploy-userAuthentication:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hacemos pull del codigo"
+      - run: echo "Corremos migraciones"
+      - run: echo "Publicar version"
